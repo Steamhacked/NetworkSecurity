@@ -12,4 +12,9 @@ Packet Delay Sources:
       1 -> Average Queing Delay is Large
       >1 -> Infinite Delay
 
+  Traceroute - network diagnostic tool that traces data packets' path from one point to another. Helps to measure delay. 
+
+  Throughput - actual rate of data transfer
+  Packet Loss - occurs when packets drop due to queue being full, random
+
   
