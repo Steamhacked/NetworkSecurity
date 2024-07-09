@@ -1,0 +1,13 @@
+ISP - Internet Service Provider,
+Levels of ISP:
+  Access - end systems
+  Regional//National - access ISPs connect to them (service fees apply)
+  T1//Global - regional ISPs connect to them
+
+IXP - Internet Exchange Points - physical infrastructure that allows peering between ISPs of the same level (free of service) [Consists of Network of Switches]
+
+POP - Point Of Presence - physical infrastructure that allows conection between ISPs of different level (service fees apply) [Consists of Routers]
+
+CDN - Content Delivery Network - interconnection of datacenters, allowing for more efficient transmission of content (Commercial)
+
+
