@@ -19,6 +19,15 @@ Packet Delay Sources:
   Throughput - actual rate of data transfer
   Packet Loss - occurs when packets drop due to queue being full, random
 
+  Net Throughput can be calculated using bottleneck method (strength of chain is define by the weakest link), example:
+  In a network with 3 links of throughputs 10, 7 and 5 MBps, the throughput of the network is 5MBps
+
+  Net Packet Loss can be calculated by totaling percentage lost, example:
+  In a network with 2 links with per-link loss rates 10% and 20%, then the net loss is:
+  100 - 100 * 0.8 * 0.9 = 28%
+
+  
+
   
 
   
