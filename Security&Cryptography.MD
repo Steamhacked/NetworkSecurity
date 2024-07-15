@@ -32,5 +32,7 @@ Encryption Types:
         Replaced DES in 2001
         Takes 1 billion billion years to bruteforce using modern computer (can be quicker if using quantum computer)
 
-  Assymetric Key Cryptography
+  Assymetric Key Cryptography - uses pair of keys, public and private
+
+    
         
