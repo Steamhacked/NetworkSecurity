@@ -36,6 +36,10 @@ Encryption Types:
 
     RSA - one of the first assymetric key cryptography algorithms, invented in 1977 by Ron Rivest, Adi Shamir and Leonard Adleman, relevant to this day in various applications
 
+    RSA meets encryption requirements:
+      1)
+      2)
+
     Algorithm:
       1) Generate Key: Choose large prime numbers p & q, calculate n = p*q, calculate z = phi(n) = (p-1)*(q-1), choose integer e such that: 1<e<z & e is coprime to z, solve for d: (ed) mod z = 1; e -> public exponent, d -> private exponent
 
