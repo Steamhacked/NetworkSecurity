@@ -1,1 +1,9 @@
+Resource Records - entries stored in DNS zone file that provide information about a domain
 
+RR = (name, value, type, TTL)
+
+Types:
+A - Address - contains IPv4 address of the hostname (AAAA -> IPv6)
+NS - Name Server - authoritative name server for given domain (can be more than 1)
+CNAME - Canonical Name - true/canonical domain name, requires more queries to resolve to an IP 
+MX - Mail Server - mail server responsible for given domain
