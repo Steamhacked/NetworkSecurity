@@ -7,3 +7,40 @@ A - Address - contains IPv4 address of the hostname (AAAA -> IPv6)
 NS - Name Server - authoritative name server for given domain (can be more than 1)
 CNAME - Canonical Name - true/canonical domain name, requires more queries to resolve to an IP 
 MX - Mail Server - mail server responsible for given domain
+
+Query and Reply Protocol: (Find Structure at https://datatracker.ietf.org/doc/html/rfc1035)
+  Identification: 16-bit number for query, reply uses the same number
+  Flags: Reply//Query, Recursion: Desired//Available, Reply: Is_Authoritative?
+  Size: Depends on number of RRs, Replies are Generally larger than Queries
+
+  Components of Variable Lengths:
+
+  Questions: name, type fields for a query
+  Answers: RRs in response to query
+  Authority: Records for authoritative servers
+  Additional Information: possibly helpful information
+
+DNS Caching: Local Name Servers will cache hostname-ip mapping once a query is made for a certain TTL, TLD servers are typically cached in DNS Local Name Servers to quicken the resolution
+  Authoritative Name Server decides the DNS record TTL (e.g.: Netflix decides TTL for DNS)*
+  Local Name Server re-queries when TTL expires
+  Update/Notify follows IETF standard 
+
+Record Insertion: Adding new records to DNS zone to manage information
+  Process:
+  1) Find DNS Registrar, to register the domain of your website
+  2) Find Authoritative Name Servers, responsible for solving your domain name
+  3) Insert DNS records (A type) into the Authoritative Name Server
+  4) Insert DNS records (NS types) of your Authoritative Name Server to the TLD
+
+DNS Registrar - company/organization that manages reservation of domain names on the internet, they mostly sell domain names
+
+Possible Attacks:
+
+DDOS - done by bombarding either root or TLD servers, the former is no longer possible due to traffic filtering
+Redirect Attack (Man in the Middle) - intercept DNS queries, direct to a different/non-existant server, client will not be able to reach an actual server
+DNS exploit for DDOS - send queries with spoofed source address (victim), amplify queries, DNS servers will reply to the victim and flood it, causing its domain to be inaccessible
+
+
+*The TTL value determines how many network hops (routers) the packet can pass through before being discarded. Each router decrements the TTL value by one. When the TTL reaches zero,
+ the router discards the packet and sends an ICMP “Time Exceeded” message back to the sender.
+  
