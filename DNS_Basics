@@ -1,1 +1,15 @@
+DNS -> Domain Name System - naming system for resources connected to the Internet of network of computers
+
+DNS server serves as an intermediary, translating user-friendly urls into ip addresses
+
+DNS is decentralized to prevent any single-point failures
+
+DNS Hierarchy: Root -> Top-Level-Domain -> Authoritative Name Servers -> Local DNS
+
+Name Resolution:
+  Iterative: returns reference to the DNS server higher in hierarchy
+  Recursive: does all the work itself proceeding to each DNS of the higher rank
+
+Whether a Query is Iterative or Recursive is decided by both Server and Client
+
 
