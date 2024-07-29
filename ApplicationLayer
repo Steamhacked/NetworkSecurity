@@ -1,0 +1,6 @@
+Socket - endpoint that sends and receives data over network, consists of ip & port
+Sockets - serve as an interface between application and transport layers, provide mechanism of sending/receiving data
+
+Socket Types:
+  1) Stream(TCP) - connection-oriented, provide reliable, ordered and error-checked delivery of data
+  2) Datagram(UDP) - connectionless, faster data delivery, but less reliable and does not guarantee error-checking
