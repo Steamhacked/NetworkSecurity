@@ -4,3 +4,13 @@ Sockets - serve as an interface between application and transport layers, provid
 Socket Types:
   1) Stream(TCP) - connection-oriented, provide reliable, ordered and error-checked delivery of data
   2) Datagram(UDP) - connectionless, faster data delivery, but less reliable and does not guarantee error-checking
+
+There are more than 1 applications, hence transport layer protocol utilizes multiplexing at sending end and demultiplexing at receiving end
+
+Multiplexing - combining data from multiple application processes into a single stream of packets, (headers with source and port added to each packet)
+Demultiplexing - examines packets and redirects data to the appropriate application processes
+
+TCP segment -> kernel uses destination port, ip & source port & ip, to identify socket managing connection
+UDP datagram -> kernel uses destination port & destination ip, to identify socket bound to ip/port
+
+
